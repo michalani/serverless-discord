@@ -17,7 +17,7 @@ ENDPOINT_PATH=/interactions
 REGISTER_COMMAND=true
 ```
 
-2. Install python3 via
+2. Install python3
 ```
 sudo apt install python3
 sudo apt install python3-pip
