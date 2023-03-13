@@ -99,3 +99,22 @@ output "InteractionsEndpointURL" {
   value = "${aws_apigatewayv2_api.apigw.api_endpoint}${local.envs["ENDPOINT_PATH"]}"
   sensitive = true
 }
+
+
+resource "null_resource" "pip-install-requests" {
+  provisioner "local-exec" {
+    command = "python3 -m pip install requests"
+    working_dir = "${path.module}"
+  }
+}
+
+resource "null_resource" "register-discord-commands" {
+  provisioner "local-exec" {
+    command = "register.py"
+    interpreter = ["python3"]
+    working_dir = "${path.module}"
+  }
+  depends_on = [
+    null_resource.pip-install-requests
+  ]
+}
