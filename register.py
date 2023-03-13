@@ -64,7 +64,6 @@ if(REGISTER_COMMAND != 'false'):
             "Authorization": "Bot {}".format(DISCORD_TOKEN)
         }
     except NameError:
-        print('wrong name')
         # or a client credentials token for your app with the applications.commands.update scope
         headers = {
             "Authorization": "Bearer {}".format(DISCORD_CREDENTIALS_TOKEN)
