@@ -72,7 +72,8 @@ resource "aws_apigatewayv2_api" "apigw" {
   name          = "serverless-discord"
   protocol_type = "HTTP"
   target = aws_lambda_function.serverless-discord-lambda-function.arn
-  route_key = "POST /interactions"
+  route_key = "POST ${local.envs["ENDPOINT_PATH"]}"
+
 }
 
 resource "aws_lambda_permission" "apigw" {

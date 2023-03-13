@@ -11,6 +11,7 @@ Port Lambda code to Docker in order to remove the .zip layer
 1. create `.env` file and add:
 ```
 DISCORD_PUBLIC_KEY=replace_me
+ENDPOINT_PATH=/interactions
 ```
 
 2. 
