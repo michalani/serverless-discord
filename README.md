@@ -20,4 +20,6 @@ $ terraform init
 $ terraform apply
 $ terraform output -raw InteractionsEndpointURL
 ```
-3. Profit
+3. Register commands with discord https://discord.com/developers/docs/interactions/application-commands#making-a-global-command
+
+4. $$$
