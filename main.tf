@@ -95,5 +95,7 @@ resource "aws_apigatewayv2_integration" "example" {
 }
 
 output "InteractionsEndpointURL" {
-  value = aws_apigatewayv2_api.apigw.api_endpoint
+  # value = aws_apigatewayv2_api.apigw.api_endpoint+""
+  value = "${aws_apigatewayv2_api.apigw.api_endpoint}${local.envs["ENDPOINT_PATH"]}"
+  sensitive = true
 }

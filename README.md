@@ -10,12 +10,13 @@ Port Lambda code to Docker in order to remove the .zip layer
 
 1. create `.env` file and add:
 ```
-DISCORD_PUBLIC_KEY = replace_me
+DISCORD_PUBLIC_KEY=replace_me
 ```
 
 2. 
 ```
 $ terraform init
 $ terraform apply
+$ terraform output -raw InteractionsEndpointURL
 ```
 3. Profit
