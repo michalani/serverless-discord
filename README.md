@@ -13,6 +13,9 @@ Port Lambda code to Docker in order to remove the .zip layer
 DISCORD_PUBLIC_KEY = replace_me
 ```
 
-2. `$ terraform apply`
-
+2. 
+```
+$ terraform init
+$ terraform apply
+```
 3. Profit
