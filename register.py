@@ -63,7 +63,7 @@ if(REGISTER_COMMAND != 'false'):
     if(r.status_code == 200):
         print('Successfully registered discord slash commands')
     else:
-        print('Discord slash command could not register')
+        print('Discord slash command could not be registered')
         print(r.content)
 else:
     print('Skipped registering discord slash command')
